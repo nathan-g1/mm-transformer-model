@@ -1,7 +1,7 @@
 import os
 from osgeo import gdal
 from datetime import datetime
-# from dateutil.parser import parse
+from pathlib import Path
 
 options_list = [
     #'-ot Byte',
@@ -17,7 +17,7 @@ for i, filename in enumerate(os.listdir(tif_dir)):
     img_type = filename_split[len(filename_split) - 1]
     date_string = filename_split[3]
     date = datetime.strptime(date_string, '%Y%m%dT%H%M%S').date()
-    new_filename = str(i) + "_" + str(date) + "_" + img_type
+    new_filename = str(i) + "_" + str(date) + "_" + img_type.replace("tif", "png")
 
     gdal.Translate(
         os.path.join("png", new_filename),
