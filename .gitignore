@@ -1,2 +1,4 @@
 *.tif
 .DS_Store
+*.png
+*.xml
