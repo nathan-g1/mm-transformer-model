@@ -5,6 +5,6 @@
 S2_data_explainableAI/*
 S2_tiff/*
 IS2_LSTM/*
-.csv
+*.csv
 data/*
 ATL03_ow_labeled_10m_5km_corrected_new_sea_surface_LSTM_ann_prepared.csv
