@@ -1,3 +1,7 @@
+'''
+Use env gdaltest
+'''
+
 import os
 from osgeo import gdal
 from datetime import datetime
@@ -11,7 +15,7 @@ options_list = [
 ]
 
 options_string = " ".join(options_list)
-tif_dir = "tif/"
+tif_dir = "S2_tif"
 for i, filename in enumerate(os.listdir(tif_dir)):
     filename_split = filename.split('_')
     img_type = filename_split[len(filename_split) - 1]
@@ -21,6 +25,6 @@ for i, filename in enumerate(os.listdir(tif_dir)):
 
     gdal.Translate(
         os.path.join("png", new_filename),
-        os.path.join("tif", filename),
+        os.path.join(tif_dir, filename),
         options=options_string
     )
