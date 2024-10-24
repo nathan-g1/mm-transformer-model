@@ -8,3 +8,8 @@ IS2_LSTM/*
 *.csv
 data/*
 ATL03_ow_labeled_10m_5km_corrected_new_sea_surface_LSTM_ann_prepared.csv
+env/*
+*.keras
+*.h5
+*.hdf5
+*.zip
