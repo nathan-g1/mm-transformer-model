@@ -14,3 +14,7 @@ env/*
 *.hdf5
 *.zip
 Before_training/*
+grid_images/*
+S2_data_explanableAI/*
+clean/*
+S2_Parallel_Workflow/*
