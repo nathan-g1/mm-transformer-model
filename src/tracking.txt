@@ -1,0 +1,81 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+EPOCHS = 20
+BATCH_SIZE = 16
+
+initial_learning_rate = 0.001
+optimizer = Adam(
+    learning_rate=initial_learning_rate,
+    beta_1=0.9,
+    beta_2=0.999,
+    epsilon=1e-07
+)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++
+####################################################
+MLF:
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     Class 0       0.97      0.99      0.98       231
+     Class 1       0.87      0.65      0.74        20
+
+    accuracy                           0.96       251
+   macro avg       0.92      0.82      0.86       251
+weighted avg       0.96      0.96      0.96       251
+
+
+Test Loss: 0.1324
+Test Accuracy: 0.9641
+
+
+
+(with 50 epochs and batch size 8)
+Classification Report:
+              precision    recall  f1-score   support
+
+     Class 0       0.36      0.56      0.44        57
+     Class 1       0.45      0.42      0.44        64
+     Class 2       0.62      0.33      0.43        60
+
+    accuracy                           0.44       181
+   macro avg       0.48      0.44      0.44       181
+weighted avg       0.48      0.44      0.44       181
+####################################################
+ADF:
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     Class 0       0.96      0.99      0.98       612
+     Class 1       0.81      0.40      0.54        42
+
+    accuracy                           0.96       654
+   macro avg       0.89      0.70      0.76       654
+weighted avg       0.95      0.96      0.95       654
+
+Test Loss: 0.1328
+Test Accuracy: 0.9557
+
+
+####################################################
+GF
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     Class 0       0.97      1.00      0.98       612
+     Class 1       1.00      0.55      0.71        42
+
+    accuracy                           0.97       654
+   macro avg       0.98      0.77      0.85       654
+weighted avg       0.97      0.97      0.97       654
+
+Test Loss: 0.1029
+Test Accuracy: 0.9709
+
+####################################################
